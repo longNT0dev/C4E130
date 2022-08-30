@@ -1,0 +1,25 @@
+.container {
+    width: 50vw;
+    height: auto;
+    background-color:#dfeef0
+}
+
+img {
+    border-radius: 50%
+}
+
+
+
+
+
+
+
+.secondary-color-text {
+    color: #6a8d8f;
+    font-weight: bold;
+}
+
+.break-line {
+    width:80%;
+    border-top: 5px dashed black ;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .block-1 .block-2 .block-3 {
+            width: 50px;
+            height: 50px;
+            background-color:red
+        } */
+
+        .block-1.block-2 {
+            width: 50px;
+            height: 50px;
+            background-color:red
+        }
+
+    </style>
+</head>
+<body>
+    <div id="block-1" class="block-1 block-2">
+        <div class="block-3">Block không bị ảnh hưởng bởi style</div>
+
+        <div class="block-2">
+            <div class="block-3">Block bị ảnh hưởng bởi style</div>
+        </div>
+    </div>
+
+
+    <div class="block-2"></div>
+
+
+</body>
+</html>
