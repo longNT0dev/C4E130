@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="url" type="text" placeholder="Nhập URL ảnh"><br>
+    <input id="widthInput" type="text" placeholder="Nhập chiều rộng của ảnh"><br>
+    <input id="heightInput" type="text" placeholder="Nhập chiều cao của ảnh"><br>
+    <input id="radiusInput" type="text" placeholder="Nhập bo góc ảnh"><br>
+    <input id="altText" type="text" placeholder="Nhập văn bản thay thế"><br>
+    <button id="btn">Submit</button>
+
+    <img id="cat-image" src="https://fridaycat.com.vn/wp-content/uploads/2021/04/meo-muop-giong-meo-pho-bien-tren-the-gioi.jpg" alt="Đây là ảnh về mèo">
+
+    <script>
+        let url = document.getElementById("url")
+        let widthInput = document.getElementById("widthInput")
+        let heightInput = document.getElementById("heightInput")
+        let radiusInput = document.getElementById("radiusInput")
+        let btn = document.getElementById("btn")
+        let altText = document.getElementById("altText")
+
+        let catImage = document.getElementById("cat-image")
+
+        btn.addEventListener("click",() => {
+            // TODO: Xử lí cái gì đó 
+            // console.log(url.value)
+            console.dir(catImage)
+
+            catImage.src = url.value
+            catImage.alt = altText.value
+            catImage.width = widthInput.value
+            catImage.height = heightInput.value
+            catImage.style.borderRadius = radiusInput.value + "px"
+
+            // Thêm điều kiện nếu có thì mới thay đổi 
+        })
+
+    </script>
+</body>
+</html>

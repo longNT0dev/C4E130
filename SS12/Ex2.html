@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="newWork" type="text" placeholder="Nhập công việc muốn thêm" />
+    <button onclick="add()">Thêm công việc</button>
+    <h1>Danh sách công việc</h1>
+    <ul id="listWork">
+      <li>Đi chơi</li>
+      <li>Làm bài tập</li>
+      <li>Giặt quần áo</li>
+    </ul>
+
+    <script>
+        let newWork = document.getElementById("newWork")
+        let listWork = document.getElementById("listWork")
+
+        console.log(listWork)
+
+        function add() {
+           // Thêm thẻ 
+           listWork.innerHTML += `<li>${newWork.value}</li>`
+        }
+
+        // remove element DOM 
+    </script>
+  </body>
+</html>

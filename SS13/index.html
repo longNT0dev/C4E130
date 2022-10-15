@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="email" type="email" />
+    <div style="color: red" id="email-error"></div>
+    <input id="password" type="password" />
+    <div style="color: red" id="password-error"></div>
+    <button id="register-btn">Đăng kí</button>
+
+    <script>
+      // 4. Tạo 1 form đăng ký gồm các trường như sau:
+      //   Email: phải đúng định dạng email
+      //   Mật khẩu: tối thiểu 6 ký tự
+      //    Khi bấm “Đăng ký”, kiểm tra tính đầy đủ các trường thông tin bắt buộc.
+      //   Nếu có trường thông tin bắt buộc chưa được nhập → Hiển thị “Nhập đầy đủ thông tin”. Nếu các trường thông tin bắt buộc đã nhập đủ → Hiển thị “Đăng ký thành công”
+
+      // Khai báo và tìm các phần tử trong html theo id
+      let email = document.getElementById("email");
+      let password = document.getElementById("password");
+      let emailError = document.getElementById("email-error");
+      let passwordError = document.getElementById("password-error");
+      let registerBtn = document.getElementById("register-btn");
+
+      registerBtn.addEventListener("click", () => {
+        // Reset empty error
+        emailError.innerText = ""
+        passwordError.innerText = ""
+        // Kiểm tra thông tin người dùng nhập vào 
+        // Check email 
+        if(!email.value) {
+            emailError.innerText = "Email is required"
+            return 
+        }
+
+        if(!password.value) {
+            passwordError.innerText = "Password is required"
+            return
+        }
+
+        if(password.value.length < 6) {
+            passwordError.innerText = "Password is too short"
+            return
+        }
+
+        // alert("Đăng kí thành công")
+        // window.location.replace("./home.html")
+        // window.location.href = "./home.html" 
+      })
+
+      // Lí do tại sao sử dụng localStorage 
+      
+    </script>
+  </body>
+</html>
